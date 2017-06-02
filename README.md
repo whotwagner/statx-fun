@@ -2,7 +2,7 @@
 
 This project is just an example implementation of the statx()-systemcall which was introduced in Linux 4.11
 
-## Requirement
+## Requirements
 
 statx-fun was written for x86 and x86_64 architectures. but it just takes two lines of code(place the right syscall-number) to port it to other architectures. It requires at least Linux Kernel 4.11.
 
