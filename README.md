@@ -56,4 +56,4 @@ GPL
 
 ## Author Information
 
-Wolfgang Hotwagner [**(https://tech.feedyourhead.at.at/)**](https://tech.feedyourhead.at)
+Wolfgang Hotwagner [**(https://tech.feedyourhead.at/)**](https://tech.feedyourhead.at)
