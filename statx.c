@@ -208,7 +208,7 @@ int main(int argc, char *argv[])
 	unsigned int mask = STATX_ALL;
 	struct statx stxbuf;
 	long ret = 0;
-	
+	int i = 0;
 	int opt = 0;
 
 	while(( opt = getopt(argc, argv, "halbsdf")) != -1)
@@ -249,16 +249,21 @@ int main(int argc, char *argv[])
 		print_help(argv[0]);
 		exit(EXIT_FAILURE);
 	}
-	printf("Filename: %s\n",argv[optind]);
-	printf("Mask: %x\n",mask);
 
-	memset(&stxbuf, 0xbf, sizeof(stxbuf));
-	ret = statx(dirfd,argv[optind],flags,mask,&stxbuf);
-	if( ret < 0)
+  	for (i = optind; i < argc; i++)
 	{
-		perror("statx");
-		return EXIT_FAILURE;
+		printf("Filename: %s\n",argv[i]);
+		printf("Mask: %x\n",mask);
+
+		memset(&stxbuf, 0xbf, sizeof(stxbuf));
+		ret = statx(dirfd,argv[i],flags,mask,&stxbuf);
+		if( ret < 0)
+		{
+			perror("statx");
+			return EXIT_FAILURE;
+		}
+		dump_statx(&stxbuf);
+		printf("\n");
 	}
-	dump_statx(&stxbuf);
 	return EXIT_SUCCESS;
 }

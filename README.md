@@ -1,6 +1,6 @@
-# statx-fun
+# statx
 
-This project is just an example implementation of the statx()-systemcall which was introduced in Linux 4.11
+This project is an example implementation of the statx()-systemcall which was introduced in Linux 4.11
 
 ## Requirements
 
