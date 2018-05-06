@@ -31,6 +31,8 @@
 #include <getopt.h>
 #include <string.h>
 
+#define VERSION 1.0.1
+
 /*
    does not (yet) provide a wrapper for the statx() system call 
 */
@@ -190,7 +192,7 @@ static void dump_statx(struct statx *stx)
 
 void print_help(const char *progname)
 {
-	printf("usage: %s [opts] filename\n",progname); 
+	printf("usage: %s [OPTION].. [FILE]...\n",progname); 
 	printf("\noptions:\n");
 	printf("\t-a.....no automount\n");
 	printf("\t-l.....dereference links\n");

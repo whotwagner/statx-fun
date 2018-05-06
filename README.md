@@ -37,7 +37,7 @@ Attributes: 0000000000000000 (........ ........ ........ ........ ........ .....
 
 ```
 ./statx
-usage: ./statx [opts] filename
+usage: ./statx [OPTION]... [FILE]...
 
 options:
 	-a.....no automount
