@@ -4,7 +4,7 @@ This project is an example implementation of the statx()-systemcall which was in
 
 ## Requirements
 
-statx-fun was written for x86 and x86_64 architectures. but it just takes two lines of code(place the right syscall-number) to port it to other architectures. It requires at least Linux Kernel 4.11.
+statx-fun was written for x86, arm64 and x86_64 architectures. but it just takes two lines of code(place the right syscall-number) to port it to other architectures. It requires at least Linux Kernel 4.11.
 
 Please note, that at the moment there is no glibc wrapper for statx()-systemcall.
 

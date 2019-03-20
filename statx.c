@@ -38,11 +38,15 @@
 */
 #include <sys/syscall.h>
 
-/* this code works ony with x86 and x86_64 */
+/* this code works ony with x86, arm64 and x86_64 */
 #if __x86_64__
 #define __NR_statx 332
 #else
-#define __NR_statx 383
+  #if __aarch64__
+    #define __NR_statx 291
+  #else
+    #define __NR_statx 383
+  #endif
 #endif
 
 #define statx(a,b,c,d,e) syscall(__NR_statx,(a),(b),(c),(d),(e))
