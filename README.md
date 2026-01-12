@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This repository has been moved to [https://codeberg.org/whotwagner/statx-fun](https://codeberg.org/whotwagner/statx-fun). Please visit the new location for the latest updates.
+
 # statx
 
 This project is an example implementation of the statx()-systemcall which was introduced in Linux 4.11
